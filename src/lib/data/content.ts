@@ -42,42 +42,64 @@ export type Project = {
 	tags: string[];
 	githubUrl?: string;
 	liveUrl?: string;
+	figmaUrl?: string;
+	imageUrl?: string;
+	videoUrl?: string;
 };
 
 export const projects: Project[] = [
 	{
+		title: 'CoJourney',
+		description: 'An app that streamlines the group travel planning process',
+		tags: ['Figma'],
+		figmaUrl:
+			'https://www.figma.com/design/f8dosYkJsSIi7G4m2L257E/BUAD-301-Stuff?node-id=581-981&t=jadnpFacNJfDog5d-1',
+		imageUrl: '/images/projects/cojourney.png',
+		videoUrl: 'https://www.youtube.com/watch?v=PfuI-PiXZ5M'
+	},
+	{
 		title: 'Baton',
 		description: 'A web app that transfers your workout history from MapMyRun to Strava',
 		tags: ['Python', 'JavaScript', 'Flask', 'Selenium'],
-		githubUrl: 'https://github.com/arianagoldstein/mapmyrun-to-strava'
+		githubUrl: 'https://github.com/arianagoldstein/mapmyrun-to-strava',
+		imageUrl: '/images/projects/cojourney.png',
+		videoUrl: 'https://www.youtube.com/watch?v=PfuI-PiXZ5M'
 	},
 	{
 		title: 'Encore',
 		description:
 			"An iOS app that's like Yelp, but for concerts— find, review, and save concerts near you.",
 		tags: ['Swift', 'iOS'],
-		githubUrl: 'https://github.com/arianagoldstein/Encore'
+		githubUrl: 'https://github.com/arianagoldstein/Encore',
+		imageUrl: '/images/projects/cojourney.png',
+		videoUrl: 'https://www.youtube.com/watch?v=PfuI-PiXZ5M'
 	},
 	{
 		title: 'Tripline',
 		description:
 			'An Android app to share travel inspiration and preserve memories from your adventures in a visual, shareable format.',
 		tags: ['Java', 'Android'],
-		githubUrl: 'https://github.com/arianagoldstein/tripline'
+		githubUrl: 'https://github.com/arianagoldstein/tripline',
+		imageUrl: '/images/projects/cojourney.png',
+		videoUrl: 'https://www.youtube.com/watch?v=PfuI-PiXZ5M'
 	},
 	{
 		title: 'USC Marketplace',
 		description:
 			'A peer-to-peer marketplace for USC students to buy, sell, and trade furniture, leases, football tickets, and more.',
 		tags: ['Web'],
-		githubUrl: 'https://github.com/idcpaine/uscmarketplace'
+		githubUrl: 'https://github.com/idcpaine/uscmarketplace',
+		imageUrl: '/images/projects/cojourney.png',
+		videoUrl: 'https://www.youtube.com/watch?v=PfuI-PiXZ5M'
 	},
 	{
 		title: 'Autofill Trojan Check',
 		description:
 			'A Chrome extension that streamlines the daily campus health check-in process, saving hundreds of clicks a semester.',
 		tags: ['JavaScript', 'Chrome Extension'],
-		githubUrl: 'https://github.com/Autofill-Trojan-Check/atc'
+		githubUrl: 'https://github.com/Autofill-Trojan-Check/atc',
+		imageUrl: '/images/projects/cojourney.png',
+		videoUrl: 'https://www.youtube.com/watch?v=PfuI-PiXZ5M'
 	}
 ];
 
