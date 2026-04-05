@@ -1,6 +1,6 @@
 <script lang="ts">
-	import { onMount } from 'svelte';
-	import { initScrollAnimations } from '$lib/animations/scroll';
+	import { onMount, onDestroy } from 'svelte';
+	import { initScrollAnimations, killScrollAnimations } from '$lib/animations/scroll';
 	import Hero from '$lib/components/Hero.svelte';
 	import About from '$lib/components/About.svelte';
 	import Experience from '$lib/components/Experience.svelte';
@@ -9,6 +9,10 @@
 
 	onMount(() => {
 		initScrollAnimations();
+	});
+
+	onDestroy(() => {
+		killScrollAnimations();
 	});
 </script>
 

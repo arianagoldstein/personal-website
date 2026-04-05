@@ -7,7 +7,7 @@
 	<div class="section-inner">
 		<p class="section-label animate-fade-up">Projects</p>
 		<div class="projects-grid">
-			{#each projects as project}
+			{#each projects as project (project.title)}
 				<ProjectCard {...project} />
 			{/each}
 		</div>

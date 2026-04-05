@@ -6,7 +6,7 @@
 	<div class="section-inner animate-fade-up">
 		<p class="section-label">Experience</p>
 		<ul class="experience-list">
-			{#each experience as role}
+			{#each experience as role (role.company + role.dates)}
 				<li class="role">
 					<div class="role-left">
 						<span class="company">{role.company}</span>
@@ -26,7 +26,6 @@
 		list-style: none;
 		display: flex;
 		flex-direction: column;
-		gap: 0;
 	}
 
 	.role {

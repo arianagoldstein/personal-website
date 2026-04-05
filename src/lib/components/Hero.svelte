@@ -1,16 +1,14 @@
 <script lang="ts">
-	import { hero, social } from '$lib/data/content';
+	import { hero } from '$lib/data/content';
+	import SocialIcons from './SocialIcons.svelte';
 </script>
 
 <section class="hero">
 	<div class="hero-content animate-fade-up">
-		<p class="greeting">Hi, I'm</p>
+		<p class="greeting">Hey there! My name is</p>
 		<h1 class="name">{hero.name}</h1>
 		<p class="tagline">{hero.tagline}</p>
-		<div class="links">
-			<a href={social.github} target="_blank" rel="noopener noreferrer">GitHub</a>
-			<a href={social.linkedin} target="_blank" rel="noopener noreferrer">LinkedIn</a>
-		</div>
+		<SocialIcons />
 	</div>
 </section>
 
@@ -50,22 +48,5 @@
 		max-width: 480px;
 		line-height: 1.6;
 		margin-bottom: 2.5rem;
-	}
-
-	.links {
-		display: flex;
-		gap: 2rem;
-	}
-
-	.links a {
-		font-size: 0.9rem;
-		font-weight: 600;
-		color: var(--color-text-muted);
-		letter-spacing: 0.04em;
-		transition: color 0.2s;
-	}
-
-	.links a:hover {
-		color: var(--color-accent);
 	}
 </style>

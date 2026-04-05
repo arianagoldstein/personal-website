@@ -1,10 +1,9 @@
 import gsap from 'gsap';
 import ScrollTrigger from 'gsap/ScrollTrigger';
 
-export function initScrollAnimations() {
-	gsap.registerPlugin(ScrollTrigger);
+gsap.registerPlugin(ScrollTrigger);
 
-	// Hero fades in on load (not scroll-triggered)
+export function initScrollAnimations() {
 	gsap.from('.animate-fade-up:first-of-type', {
 		opacity: 0,
 		y: 30,
@@ -12,7 +11,6 @@ export function initScrollAnimations() {
 		ease: 'power2.out'
 	});
 
-	// All other sections fade up as they scroll into view
 	gsap.utils.toArray<Element>('.animate-fade-up:not(:first-of-type)').forEach((el) => {
 		gsap.from(el, {
 			opacity: 0,
@@ -27,7 +25,6 @@ export function initScrollAnimations() {
 		});
 	});
 
-	// Project cards stagger in when the grid enters view
 	gsap.from('.project-card', {
 		opacity: 0,
 		y: 24,
@@ -39,4 +36,8 @@ export function initScrollAnimations() {
 			start: 'top 80%'
 		}
 	});
+}
+
+export function killScrollAnimations() {
+	ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
 }
