@@ -54,22 +54,20 @@ export const projects: Project[] = [
 		tags: ['Figma'],
 		figmaUrl:
 			'https://www.figma.com/design/f8dosYkJsSIi7G4m2L257E/BUAD-301-Stuff?node-id=581-981&t=jadnpFacNJfDog5d-1',
-		imageUrl: '/images/projects/cojourney.png',
-		videoUrl: 'https://www.youtube.com/watch?v=PfuI-PiXZ5M'
+		imageUrl: '/images/projects/cojourney.png'
 	},
 	{
 		title: 'Baton',
 		description: 'A web app that transfers your workout history from MapMyRun to Strava',
-		tags: ['Python', 'JavaScript', 'Flask', 'Selenium'],
+		tags: ['JavaScript', 'Python'],
 		githubUrl: 'https://github.com/arianagoldstein/mapmyrun-to-strava',
-		imageUrl: '/images/projects/baton.png',
-		videoUrl: 'https://www.youtube.com/watch?v=PfuI-PiXZ5M'
+		imageUrl: '/images/projects/baton.png'
 	},
 	{
 		title: 'Encore',
 		description:
 			"An iOS app that's like Yelp, but for concerts— find, review, and save concerts near you. Follow your favorite artists, view setlists, and post.",
-		tags: ['Swift', 'iOS'],
+		tags: ['Swift', 'iOS', 'Firebase'],
 		githubUrl: 'https://github.com/arianagoldstein/Encore',
 		imageUrl: '/images/projects/encore.png',
 		videoUrl: 'https://youtu.be/Ic3vFAsGfCY?si=amwURqMsbBtfeLQ8'
@@ -78,7 +76,7 @@ export const projects: Project[] = [
 		title: 'Tripline',
 		description:
 			'An Android app to share travel inspiration and preserve memories from your adventures in a visual, shareable format.',
-		tags: ['Java', 'Android'],
+		tags: ['Java', 'Android', 'Parse'],
 		githubUrl: 'https://github.com/arianagoldstein/tripline',
 		imageUrl: '/images/projects/tripline.png',
 		videoUrl: 'https://www.youtube.com/watch?v=PfuI-PiXZ5M'
@@ -87,19 +85,18 @@ export const projects: Project[] = [
 		title: 'USC Marketplace',
 		description:
 			'A peer-to-peer marketplace for USC students to buy, sell, and trade furniture, leases, football tickets, and more.',
-		tags: ['Web'],
+		tags: ['Web', 'Firebase'],
 		githubUrl: 'https://github.com/idcpaine/uscmarketplace',
-		imageUrl: '/images/projects/cojourney.png',
-		videoUrl: 'https://www.youtube.com/watch?v=PfuI-PiXZ5M'
+		imageUrl: '/images/projects/uscmarketplace.png'
 	},
 	{
 		title: 'Autofill Trojan Check',
 		description:
 			'A Chrome extension that streamlines the daily campus health check-in process, saving hundreds of clicks a semester.',
-		tags: ['JavaScript', 'Chrome Extension'],
+		tags: ['JavaScript', 'Python', 'Firebase', 'Chrome Extension'],
 		githubUrl: 'https://github.com/Autofill-Trojan-Check/atc',
-		imageUrl: '/images/projects/cojourney.png',
-		videoUrl: 'https://www.youtube.com/watch?v=PfuI-PiXZ5M'
+		imageUrl: '/images/projects/atc.png',
+		videoUrl: 'https://drive.google.com/file/d/1GnYve6PxWNqlU7KMJzW2vwcqJ0qd5hb5/view'
 	}
 ];
 
