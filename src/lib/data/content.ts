@@ -62,17 +62,17 @@ export const projects: Project[] = [
 		description: 'A web app that transfers your workout history from MapMyRun to Strava',
 		tags: ['Python', 'JavaScript', 'Flask', 'Selenium'],
 		githubUrl: 'https://github.com/arianagoldstein/mapmyrun-to-strava',
-		imageUrl: '/images/projects/cojourney.png',
+		imageUrl: '/images/projects/baton.png',
 		videoUrl: 'https://www.youtube.com/watch?v=PfuI-PiXZ5M'
 	},
 	{
 		title: 'Encore',
 		description:
-			"An iOS app that's like Yelp, but for concerts— find, review, and save concerts near you.",
+			"An iOS app that's like Yelp, but for concerts— find, review, and save concerts near you. Follow your favorite artists, view setlists, and post.",
 		tags: ['Swift', 'iOS'],
 		githubUrl: 'https://github.com/arianagoldstein/Encore',
-		imageUrl: '/images/projects/cojourney.png',
-		videoUrl: 'https://www.youtube.com/watch?v=PfuI-PiXZ5M'
+		imageUrl: '/images/projects/encore.png',
+		videoUrl: 'https://youtu.be/Ic3vFAsGfCY?si=amwURqMsbBtfeLQ8'
 	},
 	{
 		title: 'Tripline',
@@ -80,7 +80,7 @@ export const projects: Project[] = [
 			'An Android app to share travel inspiration and preserve memories from your adventures in a visual, shareable format.',
 		tags: ['Java', 'Android'],
 		githubUrl: 'https://github.com/arianagoldstein/tripline',
-		imageUrl: '/images/projects/cojourney.png',
+		imageUrl: '/images/projects/tripline.png',
 		videoUrl: 'https://www.youtube.com/watch?v=PfuI-PiXZ5M'
 	},
 	{
