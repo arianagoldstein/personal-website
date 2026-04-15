@@ -153,8 +153,8 @@
 		font-weight: 600;
 		letter-spacing: 0.05em;
 		color: var(--color-accent);
-		background: rgba(79, 142, 247, 0.08);
-		border: 1px solid rgba(79, 142, 247, 0.2);
+		background: color-mix(in srgb, var(--color-accent) 8%, transparent);
+		border: 1px solid color-mix(in srgb, var(--color-accent) 20%, transparent);
 		border-radius: 3px;
 		padding: 0.2rem 0.5rem;
 	}

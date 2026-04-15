@@ -1,9 +1,11 @@
 import gsap from 'gsap';
 import ScrollTrigger from 'gsap/ScrollTrigger';
 
-gsap.registerPlugin(ScrollTrigger);
+const triggers: ScrollTrigger[] = [];
 
 export function initScrollAnimations() {
+	gsap.registerPlugin(ScrollTrigger);
+
 	gsap.from('.animate-fade-up:first-of-type', {
 		opacity: 0,
 		y: 30,
@@ -12,7 +14,7 @@ export function initScrollAnimations() {
 	});
 
 	gsap.utils.toArray<Element>('.animate-fade-up:not(:first-of-type)').forEach((el) => {
-		gsap.from(el, {
+		const tween = gsap.from(el, {
 			opacity: 0,
 			y: 40,
 			duration: 0.7,
@@ -23,9 +25,10 @@ export function initScrollAnimations() {
 				toggleActions: 'play none none none'
 			}
 		});
+		if (tween.scrollTrigger) triggers.push(tween.scrollTrigger);
 	});
 
-	gsap.from('.project-card', {
+	const cardTween = gsap.from('.project-card', {
 		opacity: 0,
 		y: 24,
 		duration: 0.5,
@@ -36,8 +39,10 @@ export function initScrollAnimations() {
 			start: 'top 80%'
 		}
 	});
+	if (cardTween.scrollTrigger) triggers.push(cardTween.scrollTrigger);
 }
 
 export function killScrollAnimations() {
-	ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
+	triggers.forEach((trigger) => trigger.kill());
+	triggers.length = 0;
 }
