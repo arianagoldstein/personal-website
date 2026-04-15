@@ -8,10 +8,16 @@
 		<ul class="experience-list">
 			{#each experience as role (role.company + role.dates)}
 				<li class="role">
-					<div class="role-left">
+					{#if role.logoSrc}
+						<img
+							src={role.logoSrc}
+							alt={role.company}
+							class="company-logo"
+							class:invert={role.invertLogo}
+						/>
+					{/if}
+					<div class="role-info">
 						<span class="company">{role.company}</span>
-					</div>
-					<div class="role-right">
 						<span class="title">{role.role}</span>
 						<span class="dates">{role.dates}</span>
 					</div>
@@ -30,9 +36,8 @@
 
 	.role {
 		display: flex;
-		justify-content: space-between;
-		align-items: baseline;
-		gap: 2rem;
+		align-items: center;
+		gap: 1.25rem;
 		padding: 1.5rem 0;
 		border-bottom: 1px solid var(--color-border);
 	}
@@ -41,18 +46,28 @@
 		border-top: 1px solid var(--color-border);
 	}
 
+	.company-logo {
+		height: 48px;
+		width: 48px;
+		object-fit: contain;
+		flex-shrink: 0;
+		opacity: 0.9;
+	}
+
+	.company-logo.invert {
+		filter: invert(1);
+	}
+
+	.role-info {
+		display: flex;
+		flex-direction: column;
+		gap: 0.2rem;
+	}
+
 	.company {
 		font-size: 1rem;
 		font-weight: 600;
 		color: var(--color-text);
-	}
-
-	.role-right {
-		display: flex;
-		flex-direction: column;
-		align-items: flex-end;
-		gap: 0.2rem;
-		flex-shrink: 0;
 	}
 
 	.title {
@@ -67,13 +82,9 @@
 	}
 
 	@media (max-width: 540px) {
-		.role {
-			flex-direction: column;
-			gap: 0.4rem;
-		}
-
-		.role-right {
-			align-items: flex-start;
+		.company-logo {
+			height: 40px;
+			width: 40px;
 		}
 	}
 </style>

@@ -10,6 +10,11 @@
 		<p class="tagline">{hero.tagline}</p>
 		<SocialIcons />
 	</div>
+	<div class="scroll-cue" aria-hidden="true">
+		<svg width="32" height="32" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+			<path d="M10 3v14M4 11l6 6 6-6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+		</svg>
+	</div>
 </section>
 
 <style>
@@ -18,6 +23,7 @@
 		display: flex;
 		align-items: center;
 		padding: 0 2rem;
+		position: relative;
 	}
 
 	.hero-content {
@@ -48,5 +54,20 @@
 		max-width: 480px;
 		line-height: 1.6;
 		margin-bottom: 2.5rem;
+	}
+
+	.scroll-cue {
+		position: absolute;
+		bottom: 2.5rem;
+		left: 50%;
+		transform: translateX(-50%);
+		color: var(--color-text-muted);
+		opacity: 0.5;
+		animation: bounce 2s ease-in-out infinite;
+	}
+
+	@keyframes bounce {
+		0%, 100% { transform: translateX(-50%) translateY(0); }
+		50% { transform: translateX(-50%) translateY(6px); }
 	}
 </style>

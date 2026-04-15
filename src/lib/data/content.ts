@@ -11,28 +11,38 @@ export type Experience = {
 	company: string;
 	role: string;
 	dates: string;
+	logoSrc?: string;
+	invertLogo?: boolean;
 };
 
 export const experience: Experience[] = [
 	{
 		company: 'Bloomberg',
 		role: 'Software Engineer',
-		dates: '2024 – Present'
+		dates: '2024 – Present',
+		logoSrc: '/images/logos/bloomberg_black.png',
+		invertLogo: true
 	},
 	{
 		company: 'Bloomberg',
 		role: 'Software Engineer Intern',
-		dates: 'May – Aug 2023'
+		dates: 'May – Aug 2023',
+		logoSrc: '/images/logos/bloomberg_black.png',
+		invertLogo: true
 	},
 	{
 		company: 'Meta',
 		role: 'Software Engineer Intern',
-		dates: 'May – Aug 2022'
+		dates: 'May – Aug 2022',
+		logoSrc: '/images/logos/meta_black.png',
+		invertLogo: true
 	},
 	{
 		company: 'Sandia National Laboratories',
 		role: 'Software Engineer Intern',
-		dates: 'May – Aug 2021'
+		dates: 'May – Aug 2021',
+		logoSrc: '/images/logos/sandia_white.png',
+		invertLogo: false
 	}
 ];
 
