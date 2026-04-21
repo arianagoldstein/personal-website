@@ -9,12 +9,23 @@
 			{#each experience as role (role.company + role.dates)}
 				<li class="role">
 					{#if role.logoSrc}
-						<img
-							src={role.logoSrc}
-							alt={role.company}
-							class="company-logo"
-							class:invert={role.invertLogo}
-						/>
+						{#if role.url}
+							<a href={role.url} target="_blank" rel="noopener noreferrer" class="logo-link" aria-label="{role.company} website">
+								<img
+									src={role.logoSrc}
+									alt={role.company}
+									class="company-logo"
+									class:invert={role.invertLogo}
+								/>
+							</a>
+						{:else}
+							<img
+								src={role.logoSrc}
+								alt={role.company}
+								class="company-logo"
+								class:invert={role.invertLogo}
+							/>
+						{/if}
 					{/if}
 					<div class="role-info">
 						<span class="company">{role.company}</span>
@@ -44,6 +55,20 @@
 
 	.role:first-child {
 		border-top: 1px solid var(--color-border);
+	}
+
+	.logo-link {
+		display: flex;
+		flex-shrink: 0;
+	}
+
+	.logo-link .company-logo {
+		transition: transform 0.2s ease, opacity 0.2s ease;
+	}
+
+	.logo-link:hover .company-logo {
+		transform: scale(1.12);
+		opacity: 1;
 	}
 
 	.company-logo {

@@ -4,7 +4,7 @@ export const hero = {
 };
 
 export const about = {
-	bio: "I'm a software engineer based in New York, currently at Bloomberg. I like building products that are fast, thoughtful, and easy to use. Outside of work I'm usually hiking, at a concert, or planning my next trip."
+	bio: "I'm a software engineer based in New York, currently at Bloomberg. I like building intuitive, thoughtful products with seamless user experiences. Outside of work, I'm usually exploring the outdoors in and around Manhattan, memorizing song lyrics for my next concert, or perfecting my banana bread recipe."
 };
 
 export type Experience = {
@@ -13,6 +13,7 @@ export type Experience = {
 	dates: string;
 	logoSrc?: string;
 	invertLogo?: boolean;
+	url?: string;
 };
 
 export const experience: Experience[] = [
@@ -21,30 +22,42 @@ export const experience: Experience[] = [
 		role: 'Software Engineer',
 		dates: '2024 – Present',
 		logoSrc: '/images/logos/bloomberg_black.png',
-		invertLogo: true
+		invertLogo: true,
+		url: 'https://www.bloomberg.com/company/?utm_source=bloomberg-menu&utm_medium=bcom'
 	},
 	{
 		company: 'Bloomberg',
 		role: 'Software Engineer Intern',
 		dates: 'May – Aug 2023',
 		logoSrc: '/images/logos/bloomberg_black.png',
-		invertLogo: true
+		invertLogo: true,
+		url: 'https://www.bloomberg.com/company/?utm_source=bloomberg-menu&utm_medium=bcom'
 	},
 	{
 		company: 'Meta',
 		role: 'Software Engineer Intern',
 		dates: 'May – Aug 2022',
 		logoSrc: '/images/logos/meta_black.png',
-		invertLogo: true
+		invertLogo: true,
+		url: 'https://www.meta.com/about/?srsltid=AfmBOoq5Fx3vfVea7jNxqQyyir3Eery1mp2Tt3Boavoy0t-wYh4m2F93'
 	},
 	{
 		company: 'Sandia National Laboratories',
 		role: 'Software Engineer Intern',
 		dates: 'May – Aug 2021',
 		logoSrc: '/images/logos/sandia_white.png',
-		invertLogo: false
+		invertLogo: false,
+		url: 'https://www.sandia.gov'
 	}
 ];
+
+export const education = {
+	school: 'University of Southern California',
+	degree: 'B.S. Computer Engineering & Computer Science',
+	minor: 'Minor in Mobile App Development',
+	honors: 'Summa Cum Laude',
+	dates: '2020 – 2024'
+};
 
 export type Project = {
 	title: string;
