@@ -6,8 +6,19 @@
 	<div class="section-inner animate-fade-up">
 		<p class="section-label">Education</p>
 		<div class="edu-row">
-			<a href="https://www.usc.edu" target="_blank" rel="noopener noreferrer" class="logo-link" aria-label="USC website">
-				<img src="/images/logos/usc.png" alt="USC" class="school-logo" />
+			<a
+				href={education.url}
+				target="_blank"
+				rel="noopener noreferrer"
+				class="logo-link"
+				aria-label="{education.school} website"
+			>
+				<img
+					src={education.logoSrc}
+					alt={education.school}
+					class="edu-logo"
+					class:invert={education.invertLogo}
+				/>
 			</a>
 			<div class="edu-info">
 				<span class="school">{education.school}</span>
@@ -29,26 +40,15 @@
 		border-bottom: 1px solid var(--color-border);
 	}
 
-	.logo-link {
-		display: flex;
-		flex-shrink: 0;
-	}
-
-	.logo-link .school-logo {
-		transition: transform 0.2s ease, opacity 0.2s ease;
-	}
-
-	.logo-link:hover .school-logo {
-		transform: scale(1.12);
-		opacity: 1;
-	}
-
-	.school-logo {
+	.edu-logo {
 		height: 48px;
 		width: 48px;
 		object-fit: contain;
 		flex-shrink: 0;
 		opacity: 0.9;
+	}
+
+	.edu-logo.invert {
 		filter: invert(1);
 	}
 
@@ -81,7 +81,7 @@
 	}
 
 	@media (max-width: 540px) {
-		.school-logo {
+		.edu-logo {
 			height: 40px;
 			width: 40px;
 		}

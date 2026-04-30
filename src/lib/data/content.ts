@@ -56,7 +56,10 @@ export const education = {
 	degree: 'B.S. Computer Engineering & Computer Science',
 	minor: 'Minor in Mobile App Development',
 	honors: 'Summa Cum Laude',
-	dates: '2020 – 2024'
+	dates: '2020 – 2024',
+	logoSrc: '/images/logos/usc.png',
+	invertLogo: true,
+	url: 'https://www.usc.edu'
 };
 
 export type Project = {

@@ -46,6 +46,22 @@ img {
 	padding: 6rem 2rem;
 }
 
+.logo-link {
+	display: flex;
+	flex-shrink: 0;
+}
+
+.logo-link img {
+	transition:
+		transform 0.2s ease,
+		opacity 0.2s ease;
+}
+
+.logo-link:hover img {
+	transform: scale(1.12);
+	opacity: 1;
+}
+
 .section-label {
 	font-size: 0.75rem;
 	font-weight: 600;
