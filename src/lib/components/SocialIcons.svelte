@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { base } from '$app/paths';
 	import { social } from '$lib/data/content';
 	import {
 		siGithub,
@@ -24,7 +25,7 @@
 		{ label: 'Spotify', url: social.spotify, type: 'svg', path: siSpotify.path },
 		{ label: 'Letterboxd', url: social.letterboxd, type: 'svg', path: siLetterboxd.path },
 		{ label: 'Goodreads', url: social.goodreads, type: 'svg', path: siGoodreads.path },
-		{ label: 'Beli', url: social.beli, type: 'img', src: '/beli.png' },
+		{ label: 'Beli', url: social.beli, type: 'img', src: `${base}/beli.png` },
 		{ label: 'Strava', url: social.strava, type: 'svg', path: siStrava.path },
 		{ label: 'YouTube', url: social.youtube, type: 'svg', path: siYoutube.path },
 		{ label: 'Pinterest', url: social.pinterest, type: 'svg', path: siPinterest.path }

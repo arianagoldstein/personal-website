@@ -1,4 +1,4 @@
-import adapter from '@sveltejs/adapter-vercel';
+import adapter from '@sveltejs/adapter-static';
 import { relative, sep } from 'node:path';
 
 /** @type {import('@sveltejs/kit').Config} */
@@ -13,7 +13,11 @@ const config = {
 			return isExternalLibrary ? undefined : true;
 		}
 	},
-	kit: { adapter: adapter() }
+	kit: {
+		adapter: adapter(),
+		// Remove BASE_PATH env var (or set to '') when you connect your custom domain
+		paths: { base: process.env.BASE_PATH ?? '' }
+	}
 };
 
 export default config;

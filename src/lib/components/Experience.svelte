@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { base } from '$app/paths';
 	import { experience } from '$lib/data/content';
 </script>
 
@@ -18,7 +19,7 @@
 							aria-label={role.url ? `${role.company} website` : undefined}
 						>
 							<img
-								src={role.logoSrc}
+								src={`${base}${role.logoSrc}`}
 								alt={role.company}
 								class="company-logo"
 								class:invert={role.invertLogo}

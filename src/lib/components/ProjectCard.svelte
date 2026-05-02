@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { base } from '$app/paths';
 	import type { Project } from '$lib/data/content';
 	import { siGithub } from 'simple-icons';
 
@@ -78,7 +79,7 @@
 	</div>
 	{#if imageUrl}
 		<div class="card-image">
-			<img src={imageUrl} alt={title} />
+			<img src={`${base}${imageUrl}`} alt={title} />
 		</div>
 	{/if}
 </article>

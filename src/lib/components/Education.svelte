@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { base } from '$app/paths';
 	import { education } from '$lib/data/content';
 </script>
 
@@ -14,7 +15,7 @@
 				aria-label="{education.school} website"
 			>
 				<img
-					src={education.logoSrc}
+					src={`${base}${education.logoSrc}`}
 					alt={education.school}
 					class="edu-logo"
 					class:invert={education.invertLogo}
