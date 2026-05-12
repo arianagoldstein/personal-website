@@ -75,6 +75,15 @@ export type Project = {
 
 export const projects: Project[] = [
 	{
+		title: 'GirlCon',
+		description:
+			'A website introducing GirlCon, our team, and impact over 8 years of conferences empowering girls in tech',
+		tags: ['Astro', 'JavaScript'],
+		githubUrl: 'https://github.com/girlcon/website',
+		liveUrl: 'https://girlcon.org/',
+		imageUrl: '/images/projects/girlcon.png'
+	},
+	{
 		title: 'CoJourney',
 		description: 'An app that streamlines the group travel planning process',
 		tags: ['Figma'],
